@@ -5,7 +5,7 @@ export default function Article({ foodBack }) {
     <section
       className={`w-full h-[70vh] bg-rose-100 text-black flex flex-col sm:flex-row  items-center border-b-gray-00 border-b`}
     >
-      <div className="flex flex-col sm:w-1/2 w-full h-1/2 p-4 mt-10 sm:mt-0 sm:h-full justify-center text-center z-100 items-center">
+      <div className="flex flex-col sm:w-1/2 w-full h-1/2 sm:p-24 mt-10 sm:mt-0 sm:h-full justify-center text-center z-100 items-center">
         <small className="font-bold text-base">OWNER</small>
         <h2 className="font-extrabold text-2xl sm:text-3xl mb-4">
           FRAN MATHERS
@@ -17,7 +17,7 @@ export default function Article({ foodBack }) {
           cumque dolorum quas doloribus.
         </p>
       </div>
-      <div className=" flex sm:w-1/2 w-1/2 h-full justify-center items-end">
+      <div className=" flex sm:w-1/2 w-1/2 h-full justify-start items-end">
         <div>
           <Image
             className="z-5 "
