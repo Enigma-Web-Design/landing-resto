@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import yourResto from '../../public/your_logo.png';
+import Image from "next/image";
+import yourResto from "../../public/your_logo.png";
 export default function Nav() {
   return (
     <nav className="bg-white absolute flex w-full p-2 text-black sticky top-0 z-100 backdrop-blur-sm bg-opacity-90 ">
