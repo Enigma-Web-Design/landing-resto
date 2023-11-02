@@ -40,7 +40,7 @@ export default function Nav() {
         <li className="hover:text-green-700 cursor-pointer my-3">LOREM</li>
       </ul>
       <Button
-        className={`block sm:hidden absolute py-[5vw] `}
+        className={`block sm:hidden absolute py-[3vw] `}
         onClick={toggleNav}
       />
       <ul className="hidden sm:flex items-center justify-around w-full text-sm font-semibold sm:mx-24">
