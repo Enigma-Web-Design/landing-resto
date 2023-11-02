@@ -8,7 +8,12 @@ import "swiper/css/pagination";
 import "swiper/css";
 const Header = () => {
   // Rutas de las imágenes del slider
-  const images = ["/vip.jpg", "/vip.jpg", "/vip.jpg", "/vip.jpg"];
+  const images = [
+    "mainslider.jpg",
+    "mainslider2.jpg",
+    "mainslider3.jpg",
+    "mainslider4.jpg",
+  ];
 
   return (
     <>
