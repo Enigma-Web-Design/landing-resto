@@ -1,19 +1,16 @@
-
-import Footer from "@/components/Footer";
-import Nav from "@/components/Nav";
-
+import Article from '@/components/Article';
+import Footer from '@/components/Footer';
+import Nav from '@/components/Nav';
 import Section from '@/components/Section';
-
 
 export default function Home() {
   return (
     <>
       <Nav />
-
-      <Section position={"justify-start"} foodBack={"/food.png"} />
-      <Section position={"justify-end"} foodBack={"/vip.jpg"} />
+      <Article foodBack={'/owner.png'} />
+      <Section position={'justify-end bg-center'} foodBack={'/food.png'} />
+      <Section position={'justify-start'} foodBack={'/vip.jpg'} />
       <Footer />
-
     </>
   );
 }
