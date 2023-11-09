@@ -3,6 +3,7 @@ import Image from 'next/image';
 import yourResto from '../../public/your_logo.png';
 import Button from '@/commons/Button';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Nav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -13,14 +14,15 @@ export default function Nav() {
 
   return (
     <nav
-      className={`bg-white   shadow-md flex w-full sm:p-4  text-black sticky top-0 z-100 backdrop-blur-sm bg-opacity-90  justify-end absolute`}
+      className={`bg-white absolute  shadow-md flex w-full sm:p-4  text-black sticky top-0  backdrop-blur-sm bg-opacity-90  justify-end  z-10`}
     >
       {isNavExpanded ? (
         ''
       ) : (
         <div className="mx-auto py-4 sm:hidden">
-          {' '}
-          <Image width={50} src={yourResto} alt="logo" />
+          <Link href={'/'}>
+            <Image width={50} src={yourResto} alt="logo" />
+          </Link>
         </div>
       )}
 
@@ -30,29 +32,63 @@ export default function Nav() {
         }`}
       >
         <li className="py-4">
-          <Image width={50} src={yourResto} alt="logo" />
+          <Link href={'/'}>
+            <Image width={50} src={yourResto} alt="logo" />
+          </Link>
         </li>
-        <li className="hover:text-green-700 cursor-pointer my-3">ABOUT</li>
-        <li className="hover:text-green-700 cursor-pointer my-3">MENUS</li>
-        <li className="hover:text-green-700 cursor-pointer my-3">LOREM</li>
-        <li className="hover:text-green-700 cursor-pointer my-3">LOREM</li>
-        <li className="hover:text-green-700 cursor-pointer my-3">LOREM</li>
-        <li className="hover:text-green-700 cursor-pointer my-3">LOREM</li>
+        <Link href={'/'}>
+          <li className="hover:text-green-700 cursor-pointer my-3">ABOUT</li>
+        </Link>
+        <Link href={'/'}>
+          <li className="hover:text-green-700 cursor-pointer my-3">MENUS</li>
+        </Link>
+        <Link href={'/'}>
+          <li className="hover:text-green-700 cursor-pointer my-3">
+            PRIVATE ROOMS
+          </li>
+        </Link>
+        <Link href={'/'}>
+          <li className="hover:text-green-700 cursor-pointer my-3">LOREM</li>
+        </Link>
+        <Link href={'/'}>
+          <li className="hover:text-green-700 cursor-pointer my-3">
+            RESERVATIONS
+          </li>
+        </Link>
+        <Link href={'/'}>
+          <li className="hover:text-green-700 cursor-pointer my-3">
+            CONTACT US
+          </li>
+        </Link>
       </ul>
       <Button
         className={`block sm:hidden absolute py-[3vw] `}
         onClick={toggleNav}
       />
       <ul className="hidden sm:flex items-center justify-around w-full text-sm font-semibold sm:mx-24">
-        <li className="hover:text-green-700 cursor-pointer">ABOUT</li>
-        <li className="hover:text-green-700 cursor-pointer">MENUS</li>
-        <li className="hover:text-green-700 cursor-pointer">LOREM</li>
+        <Link href={'/'}>
+          <li className="hover:text-green-700 cursor-pointer">ABOUT</li>
+        </Link>
+        <Link href={'/'}>
+          <li className="hover:text-green-700 cursor-pointer">MENUS</li>
+        </Link>
+        <Link href={'/'}>
+          <li className="hover:text-green-700 cursor-pointer">PRIVATE ROOMS</li>
+        </Link>
         <li className="sm:mx-20 cursor-pointer">
-          <Image width={50} src={yourResto} alt="logo" />
+          <Link href={'/'}>
+            <Image width={50} src={yourResto} alt="logo" />
+          </Link>
         </li>
-        <li className="hover:text-green-700 cursor-pointer">LOREM</li>
-        <li className="hover:text-green-700 cursor-pointer">LOREM</li>
-        <li className="hover:text-green-700 cursor-pointer">LOREM</li>
+        <Link href={'/'}>
+          <li className="hover:text-green-700 cursor-pointer">LOREM</li>
+        </Link>
+        <Link href={'/reservations'}>
+          <li className="hover:text-green-700 cursor-pointer">RESERVATIONS</li>
+        </Link>
+        <Link href={'/'}>
+          <li className="hover:text-green-700 cursor-pointer">CONTACT US</li>
+        </Link>
       </ul>
     </nav>
   );
