@@ -65,9 +65,9 @@ export default function Nav() {
         className={`block sm:hidden absolute py-[3vw] `}
         onClick={toggleNav}
       />
-      <div className="flex w-full items-center justify-center">
+      <div className=" hidden sm:flex w-full items-center justify-center">
         <div className='w-[45%]'>
-          <ul className="hidden sm:flex items-center justify-around w-full text-sm font-semibold">
+          <ul className=" sm:flex items-center justify-around w-full text-sm font-semibold">
             <Link href={'/'}>
               <li className="hover:text-green-700 cursor-pointer">ABOUT</li>
             </Link>
@@ -78,11 +78,11 @@ export default function Nav() {
               <li className="hover:text-green-700 cursor-pointer">
                 PRIVATE ROOMS
               </li>
-            </Link>{' '}
+            </Link>
           </ul>
         </div>
         <div className='w-[10%]'>
-          <ul className="hidden sm:flex items-center justify-center w-full text-sm font-semibold">
+          <ul className=" sm:flex items-center justify-center w-full text-sm font-semibold">
             <li className="  cursor-pointer justify-center">
               <Link href={'/'}>
                 <Image width={50} src={yourResto} alt="logo" />
@@ -91,7 +91,7 @@ export default function Nav() {
           </ul>
         </div>
         <div className='w-[45%]'>
-          <ul className="hidden sm:flex items-center justify-around w-full text-sm font-semibold">
+          <ul className=" sm:flex items-center justify-around w-full text-sm font-semibold">
             <Link href={'/'}>
               <li className="hover:text-green-700 cursor-pointer">LOREM</li>
             </Link>
@@ -104,7 +104,7 @@ export default function Nav() {
               <li className="hover:text-green-700 cursor-pointer">
                 CONTACT US
               </li>
-            </Link>{' '}
+            </Link>
           </ul>
         </div>
       </div>
