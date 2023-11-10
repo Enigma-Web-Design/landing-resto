@@ -14,7 +14,7 @@ export default function Nav() {
 
   return (
     <nav
-      className={`bg-white absolute  shadow-md flex w-full sm:p-4  text-black sticky top-0  backdrop-blur-sm bg-opacity-90  justify-end  z-10`}
+      className={`bg-white absolute  shadow-md flex w-full sm:p-4  text-black sticky top-0  backdrop-blur-sm bg-opacity-90 justify-end z-10`}
     >
       {isNavExpanded ? (
         ''
@@ -39,7 +39,7 @@ export default function Nav() {
         <Link href={'/'}>
           <li className="hover:text-green-700 cursor-pointer my-3">ABOUT</li>
         </Link>
-        <Link href={'/'}>
+        <Link href={'/menu'}>
           <li className="hover:text-green-700 cursor-pointer my-3">MENUS</li>
         </Link>
         <Link href={'/'}>
@@ -50,7 +50,7 @@ export default function Nav() {
         <Link href={'/'}>
           <li className="hover:text-green-700 cursor-pointer my-3">LOREM</li>
         </Link>
-        <Link href={'/'}>
+        <Link href={'/reservations'}>
           <li className="hover:text-green-700 cursor-pointer my-3">
             RESERVATIONS
           </li>
@@ -65,31 +65,49 @@ export default function Nav() {
         className={`block sm:hidden absolute py-[3vw] `}
         onClick={toggleNav}
       />
-      <ul className="hidden sm:flex items-center justify-around w-full text-sm font-semibold sm:mx-24">
-        <Link href={'/'}>
-          <li className="hover:text-green-700 cursor-pointer">ABOUT</li>
-        </Link>
-        <Link href={'/'}>
-          <li className="hover:text-green-700 cursor-pointer">MENUS</li>
-        </Link>
-        <Link href={'/'}>
-          <li className="hover:text-green-700 cursor-pointer">PRIVATE ROOMS</li>
-        </Link>
-        <li className="sm:mx-20 cursor-pointer">
-          <Link href={'/'}>
-            <Image width={50} src={yourResto} alt="logo" />
-          </Link>
-        </li>
-        <Link href={'/'}>
-          <li className="hover:text-green-700 cursor-pointer">LOREM</li>
-        </Link>
-        <Link href={'/reservations'}>
-          <li className="hover:text-green-700 cursor-pointer">RESERVATIONS</li>
-        </Link>
-        <Link href={'/'}>
-          <li className="hover:text-green-700 cursor-pointer">CONTACT US</li>
-        </Link>
-      </ul>
+      <div className=" hidden sm:flex w-full items-center justify-center">
+        <div className='w-[45%]'>
+          <ul className=" sm:flex items-center justify-around w-full text-sm font-semibold">
+            <Link href={'/'}>
+              <li className="hover:text-green-700 cursor-pointer">ABOUT</li>
+            </Link>
+            <Link href={'/menu'}>
+              <li className="hover:text-green-700 cursor-pointer">MENUS</li>
+            </Link>
+            <Link href={'/'}>
+              <li className="hover:text-green-700 cursor-pointer">
+                PRIVATE ROOMS
+              </li>
+            </Link>
+          </ul>
+        </div>
+        <div className='w-[10%]'>
+          <ul className=" sm:flex items-center justify-center w-full text-sm font-semibold">
+            <li className="  cursor-pointer justify-center">
+              <Link href={'/'}>
+                <Image width={50} src={yourResto} alt="logo" />
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className='w-[45%]'>
+          <ul className=" sm:flex items-center justify-around w-full text-sm font-semibold">
+            <Link href={'/'}>
+              <li className="hover:text-green-700 cursor-pointer">LOREM</li>
+            </Link>
+            <Link href={'/reservations'}>
+              <li className="hover:text-green-700 cursor-pointer">
+                RESERVATIONS
+              </li>
+            </Link>
+            <Link href={'/'}>
+              <li className="hover:text-green-700 cursor-pointer">
+                CONTACT US
+              </li>
+            </Link>
+          </ul>
+        </div>
+      </div>
     </nav>
   );
 }
