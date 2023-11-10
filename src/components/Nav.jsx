@@ -14,7 +14,7 @@ export default function Nav() {
 
   return (
     <nav
-      className={`bg-white absolute  shadow-md flex w-full sm:p-4  text-black sticky top-0  backdrop-blur-sm bg-opacity-90 z-10`}
+      className={`bg-white absolute  shadow-md flex w-full sm:p-4  text-black sticky top-0  backdrop-blur-sm bg-opacity-90 justify-end z-10`}
     >
       {isNavExpanded ? (
         ''
